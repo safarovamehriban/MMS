@@ -61,6 +61,7 @@ body {
   gap: 20px;
 }
 
+
 .input-box {
   display: flex;
   flex-direction: column;
@@ -80,6 +81,15 @@ body {
   border: 1px solid #ccc;
   outline: none;
   transition: all 0.3s ease;
+}
+
+.input-box select,
+.input-box input {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .input-box input:focus,
