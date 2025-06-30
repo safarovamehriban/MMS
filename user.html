@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Şəxsi səhifə</title>
+  <link rel="stylesheet" href="assets/css/user.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h3 data-i18n="personal_page">Şəxsi səhifə</h3>
+      
+      <div class="personal_info">
+        <h1 id="student-name">Səfərova Mehriban</h1>
+        <div class="info-lines">
+          <p><i data-i18n="telephone">tel:</i> <span id="student-phone"></span></p>
+          <p><i data-i18n="email">Email:</i> <span id="student-email"></span></p>
+        </div>
+      </div>
+
+
+      <p class="back-link">
+        <a href="index.html" data-i18n="home_page">Əsas səhifəyə keçid</a>
+      </p>
+    </aside>
+    <main class="main-content">
+      <section class="personal-section">
+        <h2 data-i18n="personal_info">Şəxsi Məlumatlar</h2>
+        <div class="form-section">
+          <div class="form-group">
+            <label data-i18n="name_surname">Adı, Soyadı və Atasının adı </label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="birth_date">Doğum tarixi</label>
+            <input type="data" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelFIN">FİN kod </label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="citizenship">Vətəndaşlığı</label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label>Gender</label>
+            <input type="text" value="" disabled />
+          </div>          
+        </div>
+      </section>
+      
+        <section class="personal-section">
+        <h2 data-i18n="educationInfoTitle">Təhsil Məlumatları</h2>
+
+        <div class="form-section">
+          <h4 data-i18n="educationSectionTitle">1-ci Təhsil</h4>
+          <div class="form-group">
+            <label data-i18n="labelUniversity">Təhsil müəssisəsi</label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelFaculty">Fakültə</label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelSpecialty">İxtisas</label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelEntryYear">Qəbul olduğu il</label>
+            <input type="data" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelGraduationYear">Bitirdiyi il</label>
+            <input type="data" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelStatus">Status</label>
+            <input type="text" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelEducationBasis">Təhsil əsasları</label>
+            <input type="text" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelEducationLevel">Təhsil səviyyəsi</label>
+            <input type="text" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelEducationForm">Təhsilalma forması</label>
+            <input type="text" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelStudentID">Tələbə İD-si</label>
+            <input type="text" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelGPA">GPA - Orta bal</label>
+            <input type="text" value="" disabled />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelAttestatID">Attestat İD -si</label>
+            <input type="text" value="" disabled />
+          </div>
+        </div>
+      </section>
+      
+      <section class="personal-section">        
+        <h2 data-i18n="jobInfoTitle">İş yeri məlumatları </h2>
+        <div class="form-section">
+          <h4 data-i18n="labelJobName">İş yeri 1</h4>
+          <div class="form-group">
+            <label data-i18n="placeholderJobName">İş yerinin adı</label>
+            <input type="text" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelJobStartYear">Başlama ili </label>
+            <input type="data" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelJobPosition">Vəzifəsi</label>
+            <input type="text" value="" />
+          </div>                  
+        </div>
+      </section>
+      <section class="personal-section">        
+        <h2 data-i18n="contactInfoTitle">Əlaqə məlumatları </h2>
+        <div class="form-section">
+          <div class="form-group">
+            <label data-i18n="email">Email</label>
+            <input type="email" value="" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="labelAddress"> Yaşadığı ünvan </label>
+            <input type="adress" value="" />
+          </div>
+          <div class="form-group">
+            <label data-="labelMobile">Mobil nömrəsi</label>
+            <input type="text" value="" />
+          </div>   
+          <div class="form-group">
+            <label data-i18n="labelLinkedIn">Linked-In profil linki </label>
+            <input type="email" value="" />
+          </div>                
+        </div>
+        <div class="form-group">
+            <label data-i18n="labelGithub">Github profili</label>
+            <input type="email" value="" />
+          </div>                
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/js/user.js"></script>
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>

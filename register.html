@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/register.css" />
+    <link rel="stylesheet" href="assets/css/add-info-container.css">
+    <link rel="stylesheet" href="assets/css/add-lang-register.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <title data-i18n="pageRegister">Qeydiyyat Forması</title>
+  </head>
+  <body>
+    <!-- Əsas səyfəyə keçid start -->    
+    <div class="main-container">
+      <nav class="sidebar">
+        <ul class="nav">
+          <li><a href="index.html" class="return-home" data-i18n="navHome">Geri</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Əsas səyfəyə keçid end -->
+    <div class="container">
+      <div class="title" data-i18n="personalInfoTitle">Şəxsi Məlumatlar</div>
+     <form id="registerForm" action="#" method="post">
+        <!-- Ad, Soyad, Ata adı -->
+        <div class="columns-3">
+          <div class="input-box">
+            <label for="name" data-i18n="labelName">Adı</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="surname" data-i18n="labelSurname">Soyadı</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              placeholder="Surname"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="fathername" data-i18n="labelFatherName">Atasının adı</label>
+            <input type="text" id="fathername" name="fathername" required />
+          </div>
+        </div>
+        <!-- Doğum tarixi, FİN kod, Vətəndaşlıq-->
+        <div class="columns-3">
+          <div class="input-box">
+            <label for="dob" data-i18n="labelDOB">Doğum tarixi</label>
+            <input
+              type="text"
+              id="dob"
+              name="dob"
+              placeholder="DD/MM/YYYY"
+              required
+              data-i18n="placeholderDOB"
+            />
+          </div>
+          <div class="input-box">
+            <label for="fin" data-i18n="labelFIN">FİN kod</label>
+            <input type="text" id="fin" name="fin" required />
+          </div>
+          <div class="input-box">
+            <label for="citizenship" data-i18n="labelCitizenship">Məzunun vətəndaşlığı</label>
+              <select id="citizenship" name="citizenship" required>
+                <option value="" data-i18n="optionSelect">Seçin</option>
+                <option value="AZ" data-i18n="citizenshipAZ">Azərbaycan</option>
+                <option value="RU" data-i18n="citizenshipRU">Rusiya</option>
+                <option value="TR" data-i18n="citizenshipTR">Türkiyə</option>                
+                <option value="US" data-i18n="citizenshipUS">Amerika Birləşmiş Ştatları</option>
+                <option value="OTHER" data-i18n="citizenshipOther">Digər</option>
+              </select>
+          </div>
+        </div> 
+               <!-- Gender -->
+        <div class="gender-details">
+          <div class="category">
+            <span class="gender-title" data-i18n="genderTitle">Gender:</span>
+            <label class="gender-option">
+              <input type="radio" name="gender" value="male" required />
+              <span class="custom-radio"></span>
+              <span class="gender" data-i18n="genderMale">Kişi</span>
+            </label>
+            <label class="gender-option">
+              <input type="radio" name="gender" value="female" />
+              <span class="custom-radio"></span>
+              <span class="gender" data-i18n="genderFemale">Qadın</span>
+            </label>
+          </div>
+        </div>
+    </div>
+        <div class="container">
+          <div class="title" data-i18n="educationInfoTitle">Təhsil Məlumatları</div>
+          <form id="registerForm" action="#" method="post">
+            <div id="educationFields">
+              <!-- İlk təhsil məlumatları bölməsi burada olacaq -->
+              <div class="education-section" id="educationSection1">
+                <div class="education-title" data-i18n="educationSectionTitle">1-ci Təhsil</div> <!-- 1-ci Təhsil başlığı -->
+                <div class="columns-3">
+                  <div class="input-box">
+                    <label for="university" data-i18n="labelUniversity">Təhsil müəssisəsi</label>
+                    <select required>
+                        <option disabled selected data-i18n="optionSelect">Seçin</option>
+                        <option value="aztu" data-i18n="universityOptions.aztu">Azərbaycan Texniki Universiteti</option>
+                        <option value="bdu" data-i18n="universityOptions.bdu">Bakı Dövlət Universiteti</option>
+                        <option value="adu" data-i18n="universityOptions.adu1">Azərbaycan Dövlət Universiteti</option>
+                        <option value="qafqaz" data-i18n="universityOptions.qafqaz">Qafqaz Universiteti</option>
+                        <option value="ada" data-i18n="universityOptions.ada">ADA Universiteti</option>
+                        <option value="bdum" data-i18n="universityOptions.bmu" >Bakı Mühəndislik Universiteti</option>
+                        <option value="gdu" data-i18n="universityOptions.gdu">Gəncə Dövlət Universiteti</option>
+                        <option value="sdu" data-i18n="universityOptions.sdu1">Sumqayıt Dövlət Universiteti</option>
+                        <option value="ktu" data-i18n="universityOptions.ktu">Xəzər Universiteti</option>
+                        <option value="kdu" data-i18n="universityOptions.kdu">Azərbaycan Kooperasiya Universiteti</option>
+                        <option value="imt" data-i18n="universityOptions.imt">İqtisad Universiteti</option>
+                        <option value="mdu" data-i18n="universityOptions.mdu">Mingəçevir Dövlət Universiteti</option>
+                        <option value="asu" data-i18n="universityOptions.asu">Azərbaycan Dövlət Neft və Sənaye Universiteti</option>
+                        <option value="adu" data-i18n="universityOptions.adu2">Azərbaycan Dillər Universiteti</option>
+                        <option value="lpu" data-i18n="universityOptions.lpu">Lənkəran Dövlət Universiteti</option>
+                        <option value="ndu" data-i18n="universityOptions.ndu">Naxçıvan Dövlət Universiteti</option>
+                        <option value="qdu" data-i18n="universityOptions.qdu">Quba Dövlət Universiteti</option>
+                        <option value="sdu" data-i18n="universityOptions.sdu2">Şəki Dövlət Universiteti</option>
+                        <option value="adu" data-i18n="universityOptions.adu3">Azərbaycan Dövlət Pedaqoji Universiteti</option>
+                      </select>
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelFaculty">Fakültə</span>
+                    <select name="faculty" required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="informasika" data-i18n="facultyOptions.informasika">İnformasiya texnologiyaları və mühəndislik fakültəsi</option>
+                      <option value="iqtisadiyyat" data-i18n="facultyOptions.iqtisadiyyat">İqtisadiyyat və idarəetmə fakültəsi</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelSpecialty">İxtisas</span>
+                    <select required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="komp-muh" data-i18n="specialtyOptions.komp-muh">Kompüter mühəndisliyi</option>
+                      <option value="informas-texn" data-i18n="specialtyOptions.informas-texn">İnformasiya texnologiyaları</option>
+                      <option value="informas-tehluk" data-i18n="specialtyOptions.informas-tehluk">İnformasiya təhlükəsizliyi</option>
+                      <option value="biznesin-idare" data-i18n="specialtyOptions.biznesin-idare">Biznesin idarə edilməsi</option>
+                      <option value="iqtisadiyyat" data-i18n="specialtyOptions.iqtisadiyyat">İqtisadiyyat</option>
+                      <option value="maliyyə" data-i18n="specialtyOptions.maliyyə">Maliyyə</option>
+                      <option value="huquq" data-i18n="specialtyOptions.huquq">Hüquq</option>
+                      <option value="tibb" data-i18n="specialtyOptions.tibb">Tibb</option>
+                      <option value="muhendis-elektrik" data-i18n="specialtyOptions.muhendis-elektrik">Elektrik mühəndisliyi</option>
+                      <option value="muhendis-mex" data-i18n="specialtyOptions.muhendis-mex">Mexanika mühəndisliyi</option>
+                      <option value="neft-qaz-muh" data-i18n="specialtyOptions.neft-qaz-muh">Neft-qaz mühəndisliyi</option>
+                      <option value="arxitektura" data-i18n="specialtyOptions.arxitektura">Memarlıq</option>
+                      <option value="psixologiya" data-i18n="specialtyOptions.psixologiya">Psixologiya</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Qəbul və bitirdiyi il, status -->
+                <div class="columns-3">
+                  <div class="input-box">
+                    <label for="entryYear" data-i18n="labelEntryYear">Qəbul olduğu il</label>
+                    <select name="entryYear" id="entryYear" required>
+                      <!-- İllər dinamik olaraq buraya əlavə ediləcək -->
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <label for="graduationYear" data-i18n="labelGraduationYear">Bitirdiyi il</label>
+                    <select name="graduationYear" id="graduationYear"  required>
+                      <!-- İllər dinamik olaraq buraya əlavə ediləcək -->
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelStatus">Status</span>
+                    <select required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="aktiv" data-i18n="statusOptions.aktiv">Təhsil alır</option>
+                      <option value="bitirib" data-i18n="statusOptions.bitirib">Bitirib</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Təhsil səviyyəsi, forması və əsasları -->
+                <div class="columns-3">
+                  <div class="input-box">
+                    <span data-i18n="labelEducationBasis">Təhsil əsasları</span>
+                    <select required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="dovlet" data-i18n="educationBasisOptions.dovlet">Dövlət sifarişli</option>
+                      <option value="odenisli" data-i18n="educationBasisOptions.odenisli">Ödənişli əsaslarla</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelEducationLevel">Təhsil səviyyəsi</span>
+                    <select required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="bakalavr" data-i18n="educationLevelOptions.bakalavr">Bakalavr</option>
+                      <option value="magistr" data-i18n="educationLevelOptions.magistr">Magistr</option>
+                      <option value="doktorantura" data-i18n="educationLevelOptions.doktorantura">Doktorantura</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelEducationForm">Təhsilalma forması</span>
+                    <select required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="eyani" data-i18n="educationFormOptions.eyani">Əyani</option>
+                      <option value="qiyabi" data-i18n="educationFormOptions.qiyabi">Qiyabi</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Tələbə İD, GPA və attestat İD -si-->
+                <div class="columns-3">
+                  <div class="input-box">
+                    <span data-i18n="labelStudentID">Tələbə ID-si</span>
+                    <input type="text" placeholder="Məsələn: 202106458" required data-i18n="placeholderStudentID" />
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelGPA">GPA - Orta bal</span>
+                    <select required>
+                      <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                      <option value="A">A 91-100</option>
+                      <option value="B">B 81-90</option>
+                      <option value="C">C 71-80</option>
+                      <option value="D">D 61-70</option>
+                      <option value="E">E 51-60</option>
+                      <option value="F">F 0-50</option>
+                    </select>
+                  </div>
+                  <div class="input-box">
+                    <span data-i18n="labelAttestatID">Attestat İD -si</span>
+                    <input type="text" placeholder="Məsələn: AB123456" required data-i18n="placeholderAttestatID" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- "Təhsil əlavə et" button -->
+            <button type="button" id="addEducationBtn" data-i18n="addEducationButton">+ Təhsil əlavə et</button>
+          </form>
+        </div>
+        <script src="script.js"></script>
+
+        <!-- İş yeri bölməsi -->
+        <div class="job-container">
+          <div class="title" style="margin-top: 20px" data-i18n="jobInfoTitle">İş yeri məlumatları</div>
+          <div class="columns-3">
+            <div class="input-box">
+              <label for="jobName" data-i18n="labelJobName" >İş yeri 1</label>
+              <input type="text" name="jobName" placeholder="İş yerinin adı" required data-i18n="placeholderJobName" />
+            </div>
+            <div class="input-box">
+              <label for="graduationYear" data-i18n="labelJobStartYear">Başlama ili</label>
+              <select name="jgraduationYear" id="graduationYear" required></select>
+            </div>
+            <div class="input-box">
+              <label for="jobSurname" data-i18n="labelJobPosition">Vəzifəsi</label>
+              <input type="text" name="jobSurname" placeholder="Vəzifəsi" required />
+            </div>
+          </div>
+          <div id="jobFieldsContainer">
+            <!-- Dinamik sahələr buraya JS ilə əlavə ediləcək -->
+          </div>
+          <button type="button" onclick="addJobField()" data-i18n="addJobButton">+ İş yeri əlavə et</button>
+        </div>
+        <!-- Dil biliyi bölməsi -->
+            <div class="language-container">
+              <div class="title" style="margin-top: 20px" data-i18n="languageInfoTitle">Dil Biliyi</div>
+              <div class="columns-2">
+                <div class="input-box">
+                  <label for="languageName" data-i18n="labelLanguageName">Dil</label>
+                  <select name="languageName" required>                    
+                    <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+                    <option value="azerbaijan" data-i18n="languageOptions.azerbaijan">Azərbaycan dili</option>
+                    <option value="english" data-i18n="languageOptions.english">İngilis dili</option>
+                    <option value="russian" data-i18n="languageOptions.russian">Rus dili</option>
+                    <option value="german" data-i18n="languageOptions.german">Alman dili</option>
+                    <option value="french" data-i18n="languageOptions.french">Fransız dili</option>
+                    <option value="spanish" data-i18n="languageOptions.spanish">İspan dili</option>              
+                    <option value="turkish" data-i18n="languageOptions.turkish">Türk dili</option>
+                    <option value="arabic" data-i18n="languageOptions.arabic">Ərəb dili</option>
+                    <option value="chinese" data-i18n="languageOptions.chinese">Çin dili</option>
+                    <option value="italian" data-i18n="languageOptions.italian">İtalyan dili</option>
+                    <option value="korean" data-i18n="languageOptions.korean">Koreya dili</option>
+                  </select>
+                </div>
+                <div class="input-box">
+                  <label for="languageLevel" data-i18n="labelLanguageLevel">Səviyyə</label>
+                  <select name="languageLevel" id="languageLevel" required>
+                    <option value="high" data-i18n="languageLevelOptions.high">Yüksək</option>
+                    <option value="medium" data-i18n="languageLevelOptions.medium">Orta</option>
+                    <option value="low" data-i18n="languageLevelOptions.low">Zəif</option>
+                  </select>
+                </div>
+              </div>
+              <div id="languageFieldsContainer">
+                <!-- Dinamik dil sahələri buraya JS ilə əlavə ediləcək -->
+              </div>
+              <button type="button" onclick="addLanguageField()" data-i18n="addLanguageButton">+ Dil əlavə et</button>
+            </div>
+
+        <!-- Mobil nömrəsi, E-mail və yaşadığı ünvan -->
+        <div class="container">
+          <div class="title" data-i18n="contactInfoTitle">Əlaqə Məlumatları</div>
+        <form id="registerForm" action="#" method="post">
+        <div class="columns-3">
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>          
+          <div class="input-box">
+          <label for="address" data-i18n="labelAddress">Yaşadığı ünvan</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Bakı şəhəri, Yasamal rayonu, M. Rəhimov küçəsi 12"
+            data-i18n="placeholderAddress"
+            required
+          />
+        </div>
+          <div class="input-box">
+          <span data-i18n="labelMobile">Mobil nömrəniz</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <select required>
+              <option value="050">050</option>
+              <option value="051">051</option>
+              <option value="055">055</option>
+              <option value="070">070</option>
+              <option value="077">077</option>
+              <option value="099">099</option>
+            </select>
+            <input type="text" placeholder="___ __ __" required pattern="\d{7}" />
+          </div>
+        </div>
+        <div class="input-box">
+          <label for="linkedin-profile" data-i18n="labelLinkedIn">Linked-In profil linki</label>
+          <input
+            type="url"
+            id="linkedin-profile"
+            name="linkedin-profile"
+            placeholder="https://www.linkedin.com/in/username"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="github-profile" data-i18n="labelGithub">Github profili</label>
+          <input
+            type="url"
+            id="github-profile"
+            name="github-profile"
+            placeholder="https://www.github.com/in/username"
+            required
+          />
+        </div>
+        </div>
+        </div>
+
+            <!-- Əlavə məlumat bölməsi -->
+        <div class="container">
+          <div class="additional-info-container">
+            <h3 data-i18n="additionalInfoTitle">Əlavə Məlumat</h3>
+          </div>
+          <p data-i18n="additionalInfoDescription">* İstifadəçilər bu sahədə bacarıqları (liderlik və idarəetmə, ünsiyyət və prezentasiya bacarıqları), 
+            QHT-lərdə və cəmiyyətlərdə fəaliyyətləri, ictimai məsuliyyət layihələri, hobbiləri, maraqları, peşəkar məqsədləri və 
+            karyera planları haqqında məlumatları qeyd edə bilərlər.</p>
+            <!-- Məlumat əlavə etmək üçün textarea -->
+          <textarea class="additional-info-input" placeholder="Əlavə məlumatınızı buraya daxil edin..." data-i18n="textareaPlaceholder"></textarea>
+        </div>
+
+            <!-- Submit -->
+        <div style="text-align: center; margin-top: 20px">
+                <button
+                  class="register-btn"
+                  onclick="window.location.href='register.html'"
+                  data-i18n="registerButton"
+                >
+                  Qeydiyyatdan keç
+                </button>
+              </div>
+      </form>
+    </div>
+    <div class="col-lg-12">
+        <div class="copyright-text">
+          <p>
+            Copyright © 2025 MMS <br />
+            Design: M Safarova </p>
+        </div>
+     </div>
+       <script src="https://unpkg.com/i18next@21.9.1/i18next.min.js"></script>
+
+    <!-- JS fayllar -->
+    <script src="assets/js/register.js"></script>
+    <script src="assets/js/add-job.js"></script>
+    <script src="assets/js/graduation-year.js"></script>
+    <script src="assets/js/add-edu.js"></script>
+    <script src="assets/js/add-language.js"></script>
+    <script src="assets/js/lang.js"></script>
+  </body>
+</html>

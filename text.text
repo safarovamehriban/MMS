@@ -1,0 +1,129 @@
+ADD LANGUAGE ----------------------------------------------------------------------------------------------
+
+function addLanguageField() {
+  const languageFieldsContainer = document.getElementById('languageFieldsContainer');
+  
+  const newLanguageField = document.createElement('div');
+  newLanguageField.classList.add('columns-3');
+  
+newLanguageField.innerHTML = `
+    <div class="input-box">
+      <label data-i18n="labelLanguageName" for="languageName">Dil</label>
+      <select name="languageName" required>
+        <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+        <option value="azerbaijan" data-i18n="languageOptions.azerbaijan">Azərbaycan dili</option>
+        <option value="english" data-i18n="languageOptions.english">İngilis dili</option>
+        <option value="russian" data-i18n="languageOptions.russian">Rus dili</option>
+        <option value="german" data-i18n="languageOptions.german">Alman dili</option>
+        <option value="french" data-i18n="languageOptions.french">Fransız dili</option>
+        <option value="spanish" data-i18n="languageOptions.spanish">İspan dili</option>
+        <option value="turkish" data-i18n="languageOptions.turkish">Türk dili</option>
+        <option value="arabic" data-i18n="languageOptions.arabic">Ərəb dili</option>
+        <option value="chinese" data-i18n="languageOptions.chinese">Çin dili</option>
+        <option value="italian" data-i18n="languageOptions.italian">İtalyan dili</option>
+        <option value="korean" data-i18n="languageOptions.korean">Koreya dili</option>
+      </select>
+    </div>
+    <div class="input-box">
+      <label data-i18n="labelLanguageLevel" for="languageLevel">Səviyyə</label>
+      <select name="languageLevel" required>
+        <option value="high" data-i18n="languageLevelOptions.high">Yüksək</option>
+        <option value="medium" data-i18n="languageLevelOptions.medium">Orta</option>
+        <option value="low" data-i18n="languageLevelOptions.low">Zəif</option>
+      </select>
+    </div>
+  `;
+  
+  languageFieldsContainer.appendChild(newLanguageField);
+}
+
+
+
+ADD JOB -----------------------------------------------------------------------------------------------
+
+document.getElementById('registerForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Qeydiyyat uğurla tamamlandı!');
+});
+
+let jobCount = 1;
+
+function addJobField() {
+  jobCount++;
+  const container = document.getElementById('jobFieldsContainer');
+
+  const jobDiv = document.createElement('div');
+  jobDiv.classList.add('job-row');
+  jobDiv.innerHTML = `
+    <div class="input-box">
+      <label>İş yeri ${jobCount}</label>
+      <input type="text" name="job_place_${jobCount}" placeholder="İş yerinin adı" required />
+    </div>
+    <div class="input-box">
+      <label for="jobStartYear_${jobCount}">Başlama ili</label>
+      <select name="job_start_${jobCount}" id="jobStartYear_${jobCount}" required>
+        <option value="" disabled selected></option>
+      </select>
+    </div>
+    <div class="input-box">
+      <label>Vəzifə</label>
+      <input type="text" name="job_position_${jobCount}" placeholder="Vəzifəsi" required />
+    </div>
+  `;
+
+  container.appendChild(jobDiv);
+
+  // Başlama ili dropdown-unun illərlə doldurulması
+  populateJobStartYearDropdown(`jobStartYear_${jobCount}`);
+}
+
+function populateJobStartYearDropdown(selectId, startYear = 2000, endYear = 2099) {
+  const select = document.getElementById(selectId);
+  if (!select) return;
+
+  // İlləri əlavə edirik
+  for (let year = startYear; year <= endYear; year++) {
+    const option = document.createElement('option');
+    option.value = year;
+    option.textContent = year;
+    select.appendChild(option);
+  }
+}
+
+ADD LANG-------------------------------------------------------------------------------------------------------
+function addLanguageField() {
+  const languageFieldsContainer = document.getElementById('languageFieldsContainer');
+  
+  const newLanguageField = document.createElement('div');
+  newLanguageField.classList.add('columns-3');
+  
+newLanguageField.innerHTML = `
+    <div class="input-box">
+      <label data-i18n="labelLanguageName" for="languageName">Dil</label>
+      <select name="languageName" required>
+        <option value="" disabled selected data-i18n="optionSelect">Seçin</option>
+        <option value="azerbaijan" data-i18n="languageOptions.azerbaijan">Azərbaycan dili</option>
+        <option value="english" data-i18n="languageOptions.english">İngilis dili</option>
+        <option value="russian" data-i18n="languageOptions.russian">Rus dili</option>
+        <option value="german" data-i18n="languageOptions.german">Alman dili</option>
+        <option value="french" data-i18n="languageOptions.french">Fransız dili</option>
+        <option value="spanish" data-i18n="languageOptions.spanish">İspan dili</option>
+        <option value="turkish" data-i18n="languageOptions.turkish">Türk dili</option>
+        <option value="arabic" data-i18n="languageOptions.arabic">Ərəb dili</option>
+        <option value="chinese" data-i18n="languageOptions.chinese">Çin dili</option>
+        <option value="italian" data-i18n="languageOptions.italian">İtalyan dili</option>
+        <option value="korean" data-i18n="languageOptions.korean">Koreya dili</option>
+      </select>
+    </div>
+    <div class="input-box">
+      <label data-i18n="labelLanguageLevel" for="languageLevel">Səviyyə</label>
+      <select name="languageLevel" required>
+        <option value="high" data-i18n="languageLevelOptions.high">Yüksək</option>
+        <option value="medium" data-i18n="languageLevelOptions.medium">Orta</option>
+        <option value="low" data-i18n="languageLevelOptions.low">Zəif</option>
+      </select>
+    </div>
+  `;
+  
+  languageFieldsContainer.appendChild(newLanguageField);
+}
